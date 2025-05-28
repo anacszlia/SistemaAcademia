@@ -10,7 +10,7 @@ package manipulacao.obj;
  */
 
 //herança
-public class Professor extends Pessoa{
+public class Professor extends Funcionario{
    private String especializacao;
 
 
@@ -29,5 +29,11 @@ public class Professor extends Pessoa{
         aux+="\nEspecialização:"+especializacao;
         return aux;
     }
+    
+    @Override
+    public double calculaSalarioMes() {
+        return salario * 1.25;
+    }
+    
   
 }
