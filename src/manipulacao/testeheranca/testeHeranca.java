@@ -10,6 +10,8 @@ import manipulacao.obj.Aluno;
 import manipulacao.obj.AlunoConvenio;
 import manipulacao.obj.AvaliacaoFisica;
 import manipulacao.obj.Convenio;
+import manipulacao.obj.Exibivel;
+import manipulacao.obj.Impressora;
 import manipulacao.obj.Plano;
 import manipulacao.obj.Professor;
 
@@ -99,7 +101,10 @@ public class testeHeranca {
         System.out.println(a4.exibirDados());
         
         
-        
+        Impressora.imprimirDados(p); // p é uma instância de Professor
+        Impressora.imprimirDados(plano1); // plano1 é uma instância de Plano
+        Impressora.imprimirDados(av1); // av1 é uma instância de AvaliacaoFisica
+        Impressora.imprimirDados(a); // a é uma instância de Aluno
         
     }
 }
