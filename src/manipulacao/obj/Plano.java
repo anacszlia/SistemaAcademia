@@ -4,6 +4,8 @@
  */
 package manipulacao.obj;
 
+import java.text.DecimalFormat;
+
 /**
  *
  * @author 20241PF.CC0014
@@ -11,11 +13,12 @@ package manipulacao.obj;
 
 
 //relacionamento entre aluno e plano
-public class Plano {
+public class Plano implements Exibivel{
     private String nome;
     private String descricao;
     private double valor;
- 
+    DecimalFormat formatoMoeda = new DecimalFormat("#,##0.00");
+
     
     
     public Plano(String nome, String descricao, double valor) {
@@ -47,7 +50,21 @@ public class Plano {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    
+    @Override
+    public String toString() {
+        
+        return nome + " - " +formatoMoeda.format(valor);
+    }
+
+    public String exibirDados() {
+        String aux = "Dados do Plano:";
+        aux += "\nNome: "+nome;
+        aux += "\nDescrição: "+descricao;
+        aux += "\nValor: R$ "+formatoMoeda.format(valor);
+        
+        return aux;
+                
+    }
     
 }
 

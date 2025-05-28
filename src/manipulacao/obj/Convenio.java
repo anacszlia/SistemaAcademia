@@ -46,5 +46,10 @@ public class Convenio {
         this.desconto = valor;
     }
     
+      @Override
+    public String toString() {
+        return nome + " - "+desconto+"%";
+    }
+    
     
 }

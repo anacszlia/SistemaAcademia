@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author 20241PF.CC0014
  */
-public abstract class Pessoa {
+public abstract class Pessoa implements Exibivel{
 
     //encapsulamento
     private LocalDate dataNascimento;
