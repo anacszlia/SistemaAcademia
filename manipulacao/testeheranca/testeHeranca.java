@@ -97,7 +97,11 @@ public class testeHeranca {
         a4.setDataMatricula(LocalDate.parse("10/04/2025", formato));
         a4.setPlano(plano2);
         System.out.println(a4.exibirDados());
-        
+
+        Impressora.imprimirDados(p); // p é uma instância de Professor
+        Impressora.imprimirDados(plano1); // plano1 é uma instância de Plano
+        Impressora.imprimirDados(av1); // av1 é uma instância de AvaliacaoFisica
+        Impressora.imprimirDados(a); // a é uma instância de Aluno
         
         
         
